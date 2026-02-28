@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['lambda_0',['lambda',['../index.html#autotoc_md43',1,'']]],
+  ['lambda_20nlambda_20and_20macro_1',['lambda, nlambda, and macro',['../index.html#autotoc_md42',1,'']]],
+  ['lamblisp_2',['LambLisp',['../index.html#autotoc_md51',1,'Adding native C++ code to LambLisp.'],['../index.html#autotoc_md60',1,'How do I link existing libraries to &lt;em&gt;LambLisp&lt;/em&gt;?'],['../index.html#autotoc_md2',1,'Why &lt;em&gt;LambLisp&lt;/em&gt;?']]],
+  ['lamblisp_20adaptive_20tuning_3',['LambLisp Adaptive Tuning',['../index.html#autotoc_md37',1,'']]],
+  ['lamblisp_20architecture_20internals_4',['LambLisp Architecture Internals',['../index.html#autotoc_md20',1,'']]],
+  ['lamblisp_20block_20diagram_5',['LambLisp Block Diagram',['../index.html#autotoc_md28',1,'']]],
+  ['lamblisp_20compatibility_20matrix_6',['LambLisp Compatibility Matrix',['../index.html#autotoc_md54',1,'']]],
+  ['lamblisp_20different_20from_20small_20lisps_20such_20as_20picobit_20and_20ulisp_20or_20big_20lisps_20such_20as_20racket_20chezscheme_20and_20chicken_7',['What makes LambLisp different from small Lisps, such as Picobit and uLisp, or big Lisps, such as racket, ChezScheme, and chicken?',['../index.html#autotoc_md58',1,'']]],
+  ['lamblisp_20frequently_20asked_20questions_8',['LambLisp Frequently Asked Questions',['../index.html#autotoc_md55',1,'']]],
+  ['lamblisp_20in_20combination_20with_20c_20c_20on_20micro_20controllers_9',['What are the advantages of &lt;em&gt;LambLisp&lt;/em&gt; in combination with C/C++ on micro-controllers?',['../index.html#autotoc_md57',1,'']]],
+  ['lamblisp_20instead_20of_20scheme_10',['Why is it called LambLisp instead of Scheme?',['../index.html#autotoc_md67',1,'']]],
+  ['lamblisp_20scalable_20architecture_11',['Benefits of the LambLisp Scalable Architecture.',['../index.html#autotoc_md40',1,'']]],
+  ['lamblisp_20virtual_20machine_12',['LambLisp Virtual Machine',['../index.html#autotoc_md26',1,'']]],
+  ['language_20specification_13',['Widely recognized &lt;em&gt;Scheme&lt;/em&gt; language specification',['../index.html#autotoc_md4',1,'']]],
+  ['lexical_20scoping_14',['Lexical scoping',['../index.html#autotoc_md11',1,'']]],
+  ['libraries_15',['Reuse of existing C++/Arduino libraries',['../index.html#autotoc_md5',1,'']]],
+  ['libraries_20to_20lamblisp_16',['How do I link existing libraries to &lt;em&gt;LambLisp&lt;/em&gt;?',['../index.html#autotoc_md60',1,'']]],
+  ['link_20existing_20libraries_20to_20lamblisp_17',['How do I link existing libraries to &lt;em&gt;LambLisp&lt;/em&gt;?',['../index.html#autotoc_md60',1,'']]],
+  ['lisp_18',['Why Lisp?',['../index.html#autotoc_md1',1,'']]],
+  ['lisp_20for_20microprocessors_19',['Real-time Lisp for Microprocessors',['../index.html',1,'']]],
+  ['lisp_20in_20a_20nutshell_20',['&lt;em&gt;Lisp&lt;/em&gt; in a nutshell',['../index.html#autotoc_md16',1,'']]],
+  ['lisp_20primitives_21',['Open API for new &lt;em&gt;Lisp&lt;/em&gt; primitives',['../index.html#autotoc_md7',1,'']]],
+  ['lisps_20such_20as_20picobit_20and_20ulisp_20or_20big_20lisps_20such_20as_20racket_20chezscheme_20and_20chicken_22',['What makes LambLisp different from small Lisps, such as Picobit and uLisp, or big Lisps, such as racket, ChezScheme, and chicken?',['../index.html#autotoc_md58',1,'']]],
+  ['lisps_20such_20as_20racket_20chezscheme_20and_20chicken_23',['What makes LambLisp different from small Lisps, such as Picobit and uLisp, or big Lisps, such as racket, ChezScheme, and chicken?',['../index.html#autotoc_md58',1,'']]],
+  ['list_20structures_24',['Cell Memory Model and List Structures',['../index.html#autotoc_md31',1,'']]]
+];
