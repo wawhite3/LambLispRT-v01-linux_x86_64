@@ -1,0 +1,16 @@
+{
+ "name": "LambLisp",
+ "version": "0.1.1774558888",
+ "description":" A flexible, extensible Lisp implementation for real-time sensing and control applications.",
+ "keywords": "Lisp, Scheme, Sensors, Controls, Microcontrollers, Microprocessors, Real-Time Control, Embedded Systems",
+ "authors": [ { "name": "William A. White III", "email": "white3@frobeniusnorm.com", "url": "https://frobeniusnorm.com"  }],
+ "copyright": "Copyright 2025 Frobenius Norm LLC",
+ "license": "commercial",
+ "homepage": "https://frobeniusnorm.com",
+ "platforms": [ "*" ],
+ "frameworks": "*",
+ "build": {
+  "flags": [
+   ]
+  }
+}
