@@ -1,0 +1,61 @@
+# esp32-c6-devkitc-1 -- the first RISC-V target (P173).
+#
+# THIS SHIP-LIST HAS NEVER BEEN BOOTED.  No ESP32-C6 board exists on this host, so the env was
+# added to get the RV32 NCG backend COMPILED AND LINKED by a real riscv32 toolchain -- nothing
+# here has been observed running.  Treat every line as a starting point, not as a measurement.
+#
+# Two things in particular a future session must fix rather than trust:
+#   * PIN MAP: `boards/pins/linux.scm` is staged as Pins.scm.  That is the no-hardware STUB, and
+#     it is used because setup.scm loads Pins.scm unconditionally -- NOT because it describes a
+#     C6 devkit.  Writing a plausible-looking C6 pin map without a board in hand would be
+#     inventing hardware facts, which is worse than an obviously empty stub.
+#   * FILESYSTEM SIZE: partitions_4M.csv, inherited from flash_mb=4.  The C6 devkit has no PSRAM
+#     and ~512 KB of SRAM, so the WROVER's sectioned-test problem (the suite does not fit the FS
+#     at once) very likely applies here too -- see w3_ai_scripts/wrover_sectioned_tests.sh.
+#
+# The module list mirrors the S3/WROVER core set because setup.scm loads most of these
+# UNCONDITIONALLY (ESP32.scm, WiFi.scm, WS2812.scm, LightSensor.scm ...): omitting one does not
+# make it optional, it makes the load fail.  The C6 env does not compile the I2C/SPI/WS2812
+# feature flags, so those modules may error at runtime on a real board -- that is a Phase-0-and-
+# after question, and it is written here rather than silently pruned so the next reader sees it.
+
+# Core runtime
+core/setup.scm
+core/Compiler.scm
+core/Lobs.scm
+core/Behaviors.scm
+core/Terminal.scm
+file: boards/pins/linux.scm -> Pins.scm
+core/Timers.scm
+core/ESP32.scm
+core/CommonIO.scm
+core/Buzzer.scm
+core/WiFi.scm
+core/WS2812.scm
+core/LightSensor.scm
+core/array.scm
+
+# R5RS/R7RS overrides
+rxrs/rxrs.scm
+rxrs/rxrs_cxr.scm
+rxrs/rxrs_exceptions.scm
+rxrs/rxrs_promises.scm
+rxrs/rxrs_quasiquote.scm
+rxrs/rxrs_syntax.scm
+
+# Serial file+command tunnel: resident LLIP receiver -- needed AT BOOT to accept pushed files,
+# which is how the ll_tests suite reaches an embedded FS at all (w3_ai_scripts/llip_test_runner.py).
+features/llip-serial.scm
+
+tools/test-framework.scm
+
+# Runtime defaults
+runtime-defaults/Settings.scm
+optional: runtime-defaults/Settings-local.scm -> Settings-local.scm
+runtime-defaults/Settings-Lamb.scm
+
+# Test suite -- the same lean embedded pattern as the S3 manifests: bench + the NCG fusion probe
+# ride the FS image; the correctness tiers are pushed incrementally over LLIP.
+file: tests/ll_tests/bench-runner.scm     -> ll_tests/bench-runner.scm
+file: tests/ll_tests/benchmarks.scm       -> ll_tests/benchmarks.scm
+file: tests/ll_tests/ncg-fusion-probe.scm -> ll_tests/ncg-fusion-probe.scm
